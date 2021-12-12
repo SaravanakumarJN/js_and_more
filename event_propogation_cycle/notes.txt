@@ -1,0 +1,11 @@
+Event propogation/processing cycle involves three phases
+  1 => event capturing / event trickling (Netscape)
+  2 => targeting
+  3 => event bubbling (handlers functions/callbacks are executed during this phase by default)  (IE)
+
+- In event propogation, by default the handlers functions/callbacks are executed during bubblig phase  
+- Inorder to make the handlers functions/callback to be executed during capturing phase, we should explicitly mention capture: true as third arg while adding event listeners
+- Event propogations can be terminated at any level by explicitly adding event.stopPropogation() in the callback at the expected level 
+
+event.target => the actual element that is being clicked
+event.currentTarget => the closed/immediate parent of the the element that is clicked

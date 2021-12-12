@@ -1,0 +1,6 @@
+Event delegation
+  If there is a list of html elements inside a parent container and each list elements are having a same event listener with different handler function logic added to it.
+  (Drawback: Performance is greatly reduced)
+  
+  Taking advantage of the event bubbling and event.target, 
+    => Instead of adding event listener to every list element,a single event listener is to the parent and based on the event.target respective logic is performed 
